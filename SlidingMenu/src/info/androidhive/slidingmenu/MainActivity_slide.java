@@ -21,7 +21,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-public class MainActivity extends Activity {
+public class MainActivity_slide extends Activity {
 	private DrawerLayout mDrawerLayout;
 	private ListView mDrawerList;
 	private ActionBarDrawerToggle mDrawerToggle;
@@ -168,30 +168,31 @@ public class MainActivity extends Activity {
 		Fragment fragment = null;
 		
 		switch (position) {
-		case 0:
-    		fragment  =new PersondetailFragment(); //my problem now
-			break;
-		case 1:
-			fragment = new HomeFragment();
-			break;
-		case 2:
-			fragment = new FindPeopleFragment();
-			break;
-		case 3:
-			fragment = new PhotosFragment();
-			break;
-		case 4 :
-			fragment = new CommunityFragment();
-			break;
-		case 5:
-			fragment = new PagesFragment();
-			break;
-		case 6:
-			fragment = new WhatsHotFragment();
-			break;
-
-		default:
-			break;
+//		case 0:
+   // 		fragment  =new PersondetailFragment(); //my problem now
+//			break;
+		 case 0:
+	            fragment = new HomeFragment();
+	            break;
+	        case 1:
+	            fragment = new FindPeopleFragment();
+	            break;
+	        case 2:
+	            fragment = new PhotosFragment();
+	            break;
+	        case 3:
+	            fragment = new CommunityFragment();
+	            break;
+	        case 4:
+	            fragment = new PagesFragment();
+	            break;
+	        case 5:
+	            fragment = new WhatsHotFragment();
+	            break;
+	 
+	        default:
+	            break;
+		
 		}
 
 		if (fragment != null) {
