@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+	android:id="@+id/widget0"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+<TextView
+	android:id="@+id/textview_notice"
+	android:layout_width="163dp"
+	android:layout_height="95dp"
+	android:text="&#20351;&#29992;&#26289;&#21517;&#30331;&#20837;&#30340;&#35441;&#65292;&#23559;&#19981;&#26371;&#39023;&#31034;&#24744;&#30340;&#22995;&#21517;&#20294;&#26159;&#21482;&#33021;&#22238;&#31572;&#21839;&#38988;&#19981;&#33021;&#25552;&#20986;&#21839;&#38988;&#21938;!&#36996;&#26159;&#35531;&#22635;&#23531;&#24615;&#21029;&#36319;&#24180;&#32000;&#35613;&#35613;&#12290;"
+	android:layout_x="79dp"
+	android:layout_y="72dp" />
+<TextView
+	android:id="@+id/text_sex"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="&#24615;&#21029;:"
+	android:layout_x="84dp"
+	android:layout_y="210dp" />
+<TextView
+	android:id="@+id/rext_age"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="&#24180;&#32000;:"
+	android:layout_x="82dp"
+	android:layout_y="272dp" />
+<Button
+	android:id="@+id/button_noname_login"
+	android:layout_width="75dp"
+	android:layout_height="57dp"
+	android:text="&#21311;&#21517;&#30331;&#20837;"
+	android:layout_x="191dp"
+	android:layout_y="328dp" />
+<TextView
+	android:id="@+id/place1"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="TextView"
+	android:layout_x="150dp"
+	android:layout_y="215dp" />
+<TextView
+	android:id="@+id/palce2"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="TextView"
+	android:layout_x="152dp"
+	android:layout_y="279dp" />
+</AbsoluteLayout>
+

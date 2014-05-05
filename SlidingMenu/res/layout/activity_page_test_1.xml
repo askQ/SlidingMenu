@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+	android:id="@+id/widget0"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+<ImageView
+	android:id="@+id/widget32"
+	android:layout_width="176dp"
+	android:layout_height="176dp"
+	android:layout_x="71dp"
+	android:layout_y="46dp" />
+<TextView
+	android:id="@+id/text_account"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Account"
+	android:layout_x="49dp"
+	android:layout_y="242dp" />
+<TextView
+	android:id="@+id/text_password"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Password"
+	android:layout_x="51dp"
+	android:layout_y="287dp" />
+<EditText
+	android:id="@+id/edittext_account"
+	android:layout_width="99dp"
+	android:layout_height="wrap_content"
+	android:textSize="18sp"
+	android:layout_x="136dp"
+	android:layout_y="233dp" />
+<EditText
+	android:id="@+id/edittext_password"
+	android:layout_width="98dp"
+	android:layout_height="wrap_content"
+	android:textSize="18sp"
+	android:layout_x="136dp"
+	android:layout_y="285dp" />
+<Button
+	android:id="@+id/button_FBlogin"
+	android:layout_width="50dp"
+	android:layout_height="wrap_content"
+	android:text="FB"
+	android:layout_x="142dp"
+	android:layout_y="350dp" />
+<Button
+	android:id="@+id/button_login"
+	android:layout_width="73dp"
+	android:layout_height="57dp"
+	android:text="&#30331;&#20837;"
+	android:layout_x="52dp"
+	android:layout_y="342dp" />
+<Button
+	android:id="@+id/button_regist"
+	android:layout_width="52dp"
+	android:layout_height="wrap_content"
+	android:text="&#35387;&#20874;"
+	android:layout_x="210dp"
+	android:layout_y="350dp" />
+<Button
+	android:id="@+id/button_noname"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="&#21311;&#21517;&#30331;&#20837;"
+	android:layout_x="207dp"
+	android:layout_y="185dp" />
+</AbsoluteLayout>

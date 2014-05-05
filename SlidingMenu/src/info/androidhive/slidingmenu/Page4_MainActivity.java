@@ -18,10 +18,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-public class MainActivity_slide extends Activity {
+public class Page4_MainActivity extends Activity {
 	private DrawerLayout mDrawerLayout;
 	private ListView mDrawerList;
 	private ActionBarDrawerToggle mDrawerToggle;
@@ -57,11 +58,27 @@ public class MainActivity_slide extends Activity {
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		mDrawerList = (ListView) findViewById(R.id.list_slidermenu);//alist
 		
+		/*Danger start, wt code*/
 		View header=getLayoutInflater().inflate(R.layout.header,null);
 		mDrawerList.addHeaderView(header);
+	
+		header.setOnClickListener(new OnClickListener(){
+			Fragment fragment = null;
+		    @Override
+		    public void onClick(View v) {
+		    	displayView(20);
+		    	//fragment = new PersondeiailFragment();
+		    }
+		});
+		/*wt code end, danger END*/
+		
+		
+		// adding nav drawer items to array		
 		navDrawerItems = new ArrayList<NavDrawerItem>();
-
-		// adding nav drawer items to array
+		
+		
+	//	navDrawerItems.add(new NavDrawerItem(navMenuTitles[0], navMenuIcons.getResourceId(0, -1)));
+		
 		// Home
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[0], navMenuIcons.getResourceId(0, -1)));
 		// Find People
@@ -75,17 +92,22 @@ public class MainActivity_slide extends Activity {
 		// What's hot, We  will add a counter here
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1), true, "50+"));
 		
-
+		
 		// Recycle the typed array
 		navMenuIcons.recycle();
 
-		mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
-
+	
 		// setting the nav drawer list adapter
 		adapter = new NavDrawerListAdapter(getApplicationContext(),
 				navDrawerItems);
+		
+		
 		mDrawerList.setAdapter(adapter);
 
+		mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
+
+		
+		
 		// enabling action bar app icon and behaving it as toggle button
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 	    getActionBar().setHomeButtonEnabled(true);
@@ -111,7 +133,7 @@ public class MainActivity_slide extends Activity {
 
 		if (savedInstanceState == null) {
 			// on first time display view for first nav item
-			displayView(0);
+			displayView(0); //NOTE!!
 		}
 	}
 
@@ -123,6 +145,7 @@ public class MainActivity_slide extends Activity {
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
+			position -= mDrawerList.getHeaderViewsCount();//wt added
 			// display view for selected nav drawer item
 			displayView(position);
 		}
@@ -168,33 +191,93 @@ public class MainActivity_slide extends Activity {
 		Fragment fragment = null;
 		
 		switch (position) {
-//		case 0:
-   // 		fragment  =new PersondetailFragment(); //my problem now
-//			break;
+		
 		 case 0:
-	            fragment = new HomeFragment();
+	            fragment = new Page4_NewestFragment();
+	            FragmentManager fragmentManager = getFragmentManager();
+				fragmentManager.beginTransaction()
+						.replace(R.id.frame_container, fragment).commit();
+
+				// update selected item and title, then close the drawer
+				mDrawerList.setItemChecked(position+1, true);
+				mDrawerList.setSelection(position);
+				setTitle(navMenuTitles[position]);
+				mDrawerLayout.closeDrawer(mDrawerList);
 	            break;
-	        case 1:
-	            fragment = new FindPeopleFragment();
+		 case 1:
+	            fragment = new Page4_HotFragment();
+	            FragmentManager fragmentManager1 = getFragmentManager();
+				fragmentManager1.beginTransaction()
+						.replace(R.id.frame_container, fragment).commit();
+
+				// update selected item and title, then close the drawer
+				mDrawerList.setItemChecked(position+1, true);
+				mDrawerList.setSelection(position);
+				setTitle(navMenuTitles[position]);
+				mDrawerLayout.closeDrawer(mDrawerList);
 	            break;
-	        case 2:
-	            fragment = new PhotosFragment();
+	     case 2:
+	            fragment = new Page4_TypeFragment();
+	            FragmentManager fragmentManager2 = getFragmentManager();
+				fragmentManager2.beginTransaction()
+						.replace(R.id.frame_container, fragment).commit();
+
+				// update selected item and title, then close the drawer
+				mDrawerList.setItemChecked(position+1, true);
+				mDrawerList.setSelection(position);
+				setTitle(navMenuTitles[position]);
+				mDrawerLayout.closeDrawer(mDrawerList);
 	            break;
-	        case 3:
-	            fragment = new CommunityFragment();
+	     case 3:
+	            fragment = new Page4_TransportFragment();
+	            FragmentManager fragmentManager3 = getFragmentManager();
+				fragmentManager3.beginTransaction()
+						.replace(R.id.frame_container, fragment).commit();
+
+				// update selected item and title, then close the drawer
+				mDrawerList.setItemChecked(position+1, true);
+				mDrawerList.setSelection(position);
+				setTitle(navMenuTitles[position]);
+				mDrawerLayout.closeDrawer(mDrawerList);
 	            break;
-	        case 4:
+	     case 4:
 	            fragment = new PagesFragment();
+	            FragmentManager fragmentManager4 = getFragmentManager();
+				fragmentManager4.beginTransaction()
+						.replace(R.id.frame_container, fragment).commit();
+
+				// update selected item and title, then close the drawer
+				mDrawerList.setItemChecked(position+1, true);
+				mDrawerList.setSelection(position);
+				setTitle(navMenuTitles[position]);
+				mDrawerLayout.closeDrawer(mDrawerList);
 	            break;
-	        case 5:
-	            fragment = new WhatsHotFragment();
+	     case 5:
+	            fragment = new Page4_Etc2Fragment();
+	            FragmentManager fragmentManager5 = getFragmentManager();
+				fragmentManager5.beginTransaction()
+						.replace(R.id.frame_container, fragment).commit();
+
+				// update selected item and title, then close the drawer
+				mDrawerList.setItemChecked(position+1, true);
+				mDrawerList.setSelection(position);
+				setTitle(navMenuTitles[position]);
+				mDrawerLayout.closeDrawer(mDrawerList);
 	            break;
+	     case 20:
+	    	 fragment = new PersondeiailFragment();
+	    	 FragmentManager fragmentManager6 = getFragmentManager();
+				fragmentManager6.beginTransaction()
+						.replace(R.id.frame_container, fragment).commit();
+			setTitle("Persondetail");
+			mDrawerLayout.closeDrawer(mDrawerList);
+	    	 break;
 	 
-	        default:
+	     default:
 	            break;
 		
 		}
-
+/*
 		if (fragment != null) {
 			FragmentManager fragmentManager = getFragmentManager();
 			fragmentManager.beginTransaction()
@@ -209,6 +292,7 @@ public class MainActivity_slide extends Activity {
 			// error in creating fragment
 			Log.e("MainActivity", "Error in creating fragment");
 		}
+		*/
 	}
 
 	@Override
