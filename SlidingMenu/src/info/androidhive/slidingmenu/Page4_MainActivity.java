@@ -265,6 +265,7 @@ public class Page4_MainActivity extends Activity {
 				mDrawerLayout.closeDrawer(mDrawerList);
 	            break;
 	     case 20:
+	    	 mDrawerList.setItemChecked(0, true);
 	    	 fragment = new PersondeiailFragment();
 	    	 FragmentManager fragmentManager6 = getFragmentManager();
 				fragmentManager6.beginTransaction()

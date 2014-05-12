@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    
-    <TextView
-        android:id="@+id/txtLabel"
-         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textSize="16dp"
-        android:text="Photos View"/>
-    
-    <ImageView android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtLabel"
-        android:src="@drawable/ic_photos"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"/>
-    
+<AbsoluteLayout
+	android:id="@+id/widget0"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+<Button
+	android:id="@+id/button_BG"
+	android:layout_width="70dp"
+	android:layout_height="72dp"
+	android:text="&#30007;&#22899;&#32004;&#26371;"
+	android:layout_x="64dp"
+	android:layout_y="80dp" />
+<Button
+	android:id="@+id/button_cloth"
+	android:layout_width="72dp"
+	android:layout_height="71dp"
+	android:text="&#22580;&#21512;&#26381;&#39166;"
+	android:layout_x="175dp"
+	android:layout_y="80dp" />
+<Button
+	android:id="@+id/button_3C"
+	android:layout_width="69dp"
+	android:layout_height="73dp"
+	android:text="3C"
+	android:layout_x="65dp"
+	android:layout_y="188dp" />
+</AbsoluteLayout>
 
-</RelativeLayout>
